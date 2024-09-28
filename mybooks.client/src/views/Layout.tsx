@@ -1,10 +1,17 @@
 import { Outlet } from "react-router-dom";
-import Navbar from "../components/Navbar";
+import Navbar, { NavLink } from "../components/Navbar";
 
-function Layout() {
+export interface LayoutProps {
+    navLinks: Array<NavLink>;
+}
+/**
+ * Layout of every page in the site
+ */
+function Layout(props: LayoutProps) {
+    const { navLinks } = props;
 
     return (<div>
-        <Navbar />
+        <Navbar navLinks={navLinks} />
         <Outlet />
     </div>);
 }
