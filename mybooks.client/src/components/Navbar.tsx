@@ -29,7 +29,7 @@ const Navbar = (props: NavbarProps) => {
     }, [navLinks, currentPath])
 
     return (
-        <nav className={'navbar navbar-inverse navbar-fixed-top'} >
+        <nav className={'navbar navbar-inverse'} style={{ /* remove default margin */ marginBottom: 0, borderRadius: 0 }} >
             <div className={'container-fluid'}>
                 <Header />
                 <NavLinks navLinks={navLinks} activeLinkPath={activeLink} />
