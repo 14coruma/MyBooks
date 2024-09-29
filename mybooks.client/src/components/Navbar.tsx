@@ -29,11 +29,9 @@ const Navbar = (props: NavbarProps) => {
     }, [navLinks, currentPath])
 
     return (
-        <nav className={'navbar navbar-inverse'} style={{ /* remove default margin */ marginBottom: 0, borderRadius: 0 }} >
-            <div className={'container-fluid'}>
-                <Header />
-                <NavLinks navLinks={navLinks} activeLinkPath={activeLink} />
-            </div>
+        <nav className={"navbar navbar-expand sticky-top navbar-dark bg-dark"} style={{ /* remove default margin */ marginBottom: 0, borderRadius: 0 }} >
+            <Header />
+            <NavLinks navLinks={navLinks} activeLinkPath={activeLink} />
         </nav>
     );
 }
@@ -79,10 +77,10 @@ const NavLinks = (props: NavLinksProps) => {
     const { navLinks, activeLinkPath } = props;
 
     return (
-        <ul className={'nav navbar-nav navbar-right'}>
+        <ul className={'navbar-nav'}>
             {navLinks.map(navLink => (
-                <li className={navLink.path == activeLinkPath ? "active" : ""}>
-                    <Link to={navLink.path}>{navLink.displayName}</Link>
+                <li className={navLink.path == activeLinkPath ? "active nav-item" : "nav-item"}>
+                    <Link to={navLink.path} className={"nav-link"}>{navLink.displayName}</Link>
                 </li>
             ))}
         </ul>
