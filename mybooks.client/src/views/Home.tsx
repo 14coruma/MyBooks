@@ -11,6 +11,7 @@ function Home() {
                         <h1 className={"display-4"}>Read More</h1>
                         <h1 className={"display-4"}>Have Fun</h1>
                         <p className={"lead"}>Providing tools to meet your reading goals.</p>
+                        <a href={"/signin"} type={"button"} className={"btn btn-primary"}>Sign up - It's free</a>
                     </>
                 }
                 contentRight={

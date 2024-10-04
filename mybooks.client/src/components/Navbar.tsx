@@ -29,9 +29,11 @@ const Navbar = (props: NavbarProps) => {
     }, [navLinks, currentPath])
 
     return (
-        <nav className={"navbar navbar-expand sticky-top navbar-dark bg-dark"} style={{ /* remove default margin */ marginBottom: 0, borderRadius: 0 }} >
-            <Header />
-            <NavLinks navLinks={navLinks} activeLinkPath={activeLink} />
+        <nav className={"navbar navbar-expand sticky-top navbar-dark bg-dark"}>
+            <div className={"container-fluid"}>
+                <Header />
+                <NavLinks navLinks={navLinks} activeLinkPath={activeLink} />
+            </div>
         </nav>
     );
 }
@@ -59,9 +61,7 @@ function getActiveLink(navLinks: Array<NavLink>, currentPath: string): string {
  */
 const Header = () => {
     return (
-        <div className={'navbar-header'}>
-            <Link to="/" className={'navbar-brand'}>MyBooks</Link>
-        </div>
+        <Link to="/" className={'navbar-brand'}>MyBooks</Link>
     );
 }
 
