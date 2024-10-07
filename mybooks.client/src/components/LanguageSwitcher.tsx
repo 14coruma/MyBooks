@@ -8,12 +8,12 @@ const lngs: ILanguages<string> = {
 };
 
 function LanguageSwitcher() {
-    const { currentLanguage, changeLanguage } = useLanguage();
+    const { changeLanguage } = useLanguage();
 
     return (
         <li className="nav-item dropdown">
             <button className="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                {currentLanguage}
+                <span className="bi bi-translate"></span>
             </button>
             <ul className="dropdown-menu dropdown-menu-end dropdown-menu-dark">
                 {Object.keys(lngs).map((lng: string) => (

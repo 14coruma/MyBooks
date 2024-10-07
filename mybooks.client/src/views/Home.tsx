@@ -1,17 +1,9 @@
-import { useEffect } from "react";
 import Footer from "../components/home/Footer";
 import Jumbotron from "../components/home/Jumbotron";
 import { useTranslation } from "react-i18next";
 
 function Home() {
-    const { t, i18n } = useTranslation();
-
-    //useEffect(() => {
-    //    if (i18n.resolvedLanguage) {
-    //        document.documentElement.lang = i18n.resolvedLanguage;
-    //        document.documentElement.dir = i18n.dir(i18n.resolvedLanguage);
-    //    }
-    //}, [i18n, i18n.resolvedLanguage]);
+    const { t } = useTranslation();
 
     return (
         <>
@@ -20,7 +12,6 @@ function Home() {
                 contentLeft={
                     <>
                         <h1 className={"display-4"}>{t('home.j1.readMore')}</h1>
-                        <h1 className={"display-4"}>{t('home.j1.haveFun')}</h1>
                         <p className={"lead"}>{t('home.j1.explanation')}</p>
                         <a href={"/signin"} type={"button"} className={"btn btn-primary"}>{t('home.j1.signupBtn')}</a>
                     </>
