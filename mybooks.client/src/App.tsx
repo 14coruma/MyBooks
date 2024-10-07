@@ -6,12 +6,15 @@ import Home from "./views/Home";
 import Features from "./views/Features";
 import SignIn from "./views/SignIn";
 import PageNotFound from "./views/PageNotFound"
+import { useTranslation } from 'react-i18next';
 
 function App() {
+    const { t } = useTranslation();
+
     const navLinks: Array<NavLink> = [
-        { path: "/", displayName: "Home" },
-        { path: "/features", displayName: "Features" },
-        { path: "/signin", displayName: "Sign In" },
+        { path: "/", displayName: t("nav.home") },
+        { path: "/features", displayName: t("nav.features") },
+        { path: "/signin", displayName: t("nav.signIn") },
     ];
 
     return (

@@ -4,7 +4,7 @@ interface ILanguages<T> { [index: string]: T }
 
 const lngs: ILanguages<string> = {
     en: 'English',
-    es: 'Spanish'
+    es: 'Espa\u00f1ol'
 };
 
 function LanguageSwitcher() {

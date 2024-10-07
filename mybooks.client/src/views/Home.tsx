@@ -12,6 +12,7 @@ function Home() {
                 contentLeft={
                     <>
                         <h1 className={"display-4"}>{t('home.j1.readMore')}</h1>
+                        <h1 className={"display-4"}>{t('home.j1.haveFun')}</h1>
                         <p className={"lead"}>{t('home.j1.explanation')}</p>
                         <a href={"/signin"} type={"button"} className={"btn btn-primary"}>{t('home.j1.signupBtn')}</a>
                     </>

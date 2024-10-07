@@ -16,6 +16,11 @@ i18n
         resources: {
             en: {
                 translation: {
+                    nav: {
+                        home: "Home",
+                        features: "Features",
+                        signIn: "Sign in"
+                    },
                     home: {
                         j1: {
                             readMore: 'Read More',
@@ -36,12 +41,24 @@ i18n
             },
             es: {
                 translation: {
+                    nav: {
+                        home: "Hogar",
+                        features: "Caracter\u00edsticas",
+                        signIn: "Acceso"
+                    },
                     home: {
                         j1: {
-                            readMore: 'Hola',
-                            haveFun: 'Heya',
-                            explanation: 'I love spanish',
+                            readMore: 'Leer m\u00e1s',
+                            haveFun: 'Divertirse',
+                            explanation: 'Proporcionar herramientas para alcanzar sus objetivos de lectura.',
+                            signupBtn: 'Inscribirse',
                         },
+                        j2: {
+                            readingCompanion: 'Compa\u00f1ero de lectura',
+                        },
+                        j3: {
+                            manageLibrary: 'Administre su biblioteca',
+                        }
                     }
                 },
             },
