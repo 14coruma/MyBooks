@@ -1,17 +1,20 @@
 import Footer from "../components/home/Footer";
 import Jumbotron from "../components/home/Jumbotron";
+import { useTranslation } from "react-i18next";
 
 function Home() {
+    const { t } = useTranslation();
+
     return (
         <>
             <Jumbotron
                 color={"bg-white"}
                 contentLeft={
                     <>
-                        <h1 className={"display-4"}>Read More</h1>
-                        <h1 className={"display-4"}>Have Fun</h1>
-                        <p className={"lead"}>Providing tools to meet your reading goals.</p>
-                        <a href={"/signin"} type={"button"} className={"btn btn-primary"}>Sign up - It's free</a>
+                        <h1 className={"display-4"}>{t('home.j1.readMore')}</h1>
+                        <h1 className={"display-4"}>{t('home.j1.haveFun')}</h1>
+                        <p className={"lead"}>{t('home.j1.explanation')}</p>
+                        <a href={"/signin"} type={"button"} className={"btn btn-primary"}>{t('home.j1.signupBtn')}</a>
                     </>
                 }
                 contentRight={
@@ -26,11 +29,10 @@ function Home() {
                     <>
                         <img src="https://placehold.it/150x80?text=Image" className={"img-responsive"} style={{ width: "100%" }} alt="Image" />
                     </>
-                }
-                contentRight={
+                } contentRight={
                     <>
-                        <h1 className={"display-4"}>Reading Companion</h1>
-                        <p className={"lead"}>blah blah look at this cool example</p>
+                        <h1 className={"display-4"}>{t('home.j2.readingCompanion')}</h1>
+                        <p className={"lead"}>{t('home.j2.explanation')}</p>
                     </>
                 }
             />
@@ -38,8 +40,8 @@ function Home() {
                 color={"bg-white"}
                 contentLeft={
                     <>
-                        <h1 className={"display-4"}>Manage your libary</h1>
-                        <p className={"lead"}>blah blah keep track of your books and progress</p>
+                        <h1 className={"display-4"}>{t('home.j3.manageLibrary')}</h1>
+                        <p className={"lead"}>{t('home.j3.explanation')}</p>
                     </>
                 }
                 contentRight={

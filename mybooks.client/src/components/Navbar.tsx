@@ -1,5 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 /** Reprents a single link on the navbar */
 export type NavLink = {
@@ -79,10 +80,11 @@ const NavLinks = (props: NavLinksProps) => {
     return (
         <ul className={'navbar-nav'}>
             {navLinks.map(navLink => (
-                <li className={navLink.path == activeLinkPath ? "active nav-item" : "nav-item"}>
+                <li className={navLink.path == activeLinkPath ? "border-bottom nav-item" : "nav-item"}>
                     <Link to={navLink.path} className={"nav-link"}>{navLink.displayName}</Link>
                 </li>
             ))}
+            <LanguageSwitcher />
         </ul>
     );
 }
