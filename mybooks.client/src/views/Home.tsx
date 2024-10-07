@@ -1,9 +1,18 @@
+import { useEffect } from "react";
 import Footer from "../components/home/Footer";
 import Jumbotron from "../components/home/Jumbotron";
 import { useTranslation } from "react-i18next";
 
 function Home() {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
+
+    //useEffect(() => {
+    //    if (i18n.resolvedLanguage) {
+    //        document.documentElement.lang = i18n.resolvedLanguage;
+    //        document.documentElement.dir = i18n.dir(i18n.resolvedLanguage);
+    //    }
+    //}, [i18n, i18n.resolvedLanguage]);
+
     return (
         <>
             <Jumbotron

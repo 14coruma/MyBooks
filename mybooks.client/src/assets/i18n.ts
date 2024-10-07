@@ -1,7 +1,6 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
-import Jumbotron from '../components/home/Jumbotron';
 
 i18n
     .use(LanguageDetector)
@@ -37,11 +36,13 @@ i18n
             },
             es: {
                 translation: {
+                    home: {
                         j1: {
-                            readMore: 'Read More',
-                            haveFun: 'Have Fun',
-                            explanation: 'Providing tools to meet your reading goals.',
+                            readMore: 'Hola',
+                            haveFun: 'Heya',
+                            explanation: 'I love spanish',
                         },
+                    }
                 },
             },
         },
