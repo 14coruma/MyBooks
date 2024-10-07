@@ -12,7 +12,7 @@ function Jumbotron(props: JumbotronProps) {
 
     return (
         <div className={"p-5 mb-4 rounded-3 " + color}>
-            <div className={"container-fluid py-5"}>
+            <div className={"container-lg py-5"}>
                 <div className="row align-text-center">
                     <div className={"col-sm-6"}>{contentLeft}</div>
                     <div className={"col-sm-6"}>{contentRight}</div>
