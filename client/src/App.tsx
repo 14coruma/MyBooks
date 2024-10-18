@@ -1,11 +1,12 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { NavLink } from "./components/Navbar";
+import { useTranslation } from 'react-i18next';
+
 import Layout from "./views/Layout";
 import Home from "./views/Home";
 import Features from "./views/Features";
 import SignIn from "./views/SignIn";
 import PageNotFound from "./views/PageNotFound"
-import { useTranslation } from 'react-i18next';
 
 function App() {
     const { t } = useTranslation();

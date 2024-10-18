@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import { ServerUrl } from "../Utils";
 
 export default function Record() {
   const [form, setForm] = useState({
@@ -14,10 +15,10 @@ export default function Record() {
   useEffect(() => {
     async function fetchData() {
       const id = params.id?.toString() || undefined;
-      if(!id) return;
+      if (!id) return;
       setIsNew(false);
       const response = await fetch(
-        `http://localhost:5050/record/${params.id?.toString() ?? ""}`
+        `${ServerUrl}/record/${params.id?.toString() ?? ""}`
       );
       if (!response.ok) {
         const message = `An error has occurred: ${response.statusText}`;
@@ -51,7 +52,7 @@ export default function Record() {
       let response;
       if (isNew) {
         // if we are adding a new record we will POST to /record.
-        response = await fetch("http://localhost:5050/record", {
+        response = await fetch(`${ServerUrl}/record`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -60,7 +61,7 @@ export default function Record() {
         });
       } else {
         // if we are updating a record we will PATCH to /record/:id.
-        response = await fetch(`http://localhost:5050/record/${params.id}`, {
+        response = await fetch(`${ServerUrl}/record/${params.id}`, {
           method: "PATCH",
           headers: {
             "Content-Type": "application/json",
@@ -73,7 +74,7 @@ export default function Record() {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
     } catch (error) {
-      console.error('A problem occurred with your fetch operation: ', error);
+      console.error("A problem occurred with your fetch operation: ", error);
     } finally {
       setForm({ name: "", position: "", level: "" });
       navigate("/");
@@ -83,7 +84,9 @@ export default function Record() {
   // This following section will display the form that takes the input from the user.
   return (
     <>
-      <h3 className="text-lg font-semibold p-4">Create/Update Employee Record</h3>
+      <h3 className="text-lg font-semibold p-4">
+        Create/Update Employee Record
+      </h3>
       <form
         onSubmit={onSubmit}
         className="border rounded-lg overflow-hidden p-4"
