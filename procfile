@@ -1,1 +1,2 @@
+web: cd client && npm start
 worker: cd server && node --env-file=config.env server
