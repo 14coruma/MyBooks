@@ -1,0 +1,18 @@
+# Config files
+config.env
+tsconfig.*
+*.config.*
+
+# Node
+node_modules/
+.npm
+
+# Logs
+logs/
+*.log
+
+# Distribution
+dist/
+
+# Editor
+.vscode/
