@@ -3,7 +3,7 @@ import RecordList from "../components/RecordList";
 function Features() {
   return (
     <>
-      <p>Features</p>
+      <p>Features 2.0</p>
       <RecordList/>
     </>
   );
