@@ -1,7 +1,11 @@
+import RecordList from "../components/RecordList";
 
 function Features() {
   return (
-    <p>Features</p>
+    <>
+      <p>Features</p>
+      <RecordList/>
+    </>
   );
 }
 
