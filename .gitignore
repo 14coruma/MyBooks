@@ -13,4 +13,4 @@ dist/
 .vscode/
 
 # Important config files
-config.env
+#config.env
